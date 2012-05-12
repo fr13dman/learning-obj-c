@@ -7,16 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Greeter.h"
 
 int main(int argc, const char * argv[])
 {
 
-    @autoreleasepool {
+    @autoreleasepool 
+    {
         
         // insert code here...
         NSLog(@"Hello, World!");
         NSLog(@"Hello Universe!!!");
+        
+        Greeter* myGreeter = [[Greeter alloc] init];
+        [myGreeter setGreetingText:@"Howdy!!"];
+        [myGreeter greet];
     }
+    
     return 0;
 }
 
